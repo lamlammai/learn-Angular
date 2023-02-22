@@ -1,0 +1,37 @@
+<div class="test">
+  <h3>Đây là component Home</h3>
+  <h1>Trái cây</h1>
+  <!-- <table class="table">
+    <tr>
+      <th>Thứ Tự</th>
+      <th>Tên</th>
+      <th>Giá</th>
+      <th>Đại Hạ Giá</th>
+    </tr>
+    <tr *ngFor="let trai of traiCay2; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ trai.ten | lowercase }}</td>
+      <td class="right">
+        <span [ngClass]="{ 'so-am': trai.gia < 0 }">{{
+          trai.gia | currency: "VND":"symbol":"1.2"
+        }}</span>
+      </td>
+      <td>
+        <span>{{ trai.haGia | onSale | uppercase }}</span>
+      </td>
+    </tr>
+  </table> -->
+  Tỉnh / Thành Phố:
+  <select id="city" (change)="changeCity($event)">
+    <option *ngFor="let data of vietnamData" value="{{ data.city }}">
+      {{ data.city }}
+    </option>
+  </select>
+  <br />
+  Quận / Huyện:
+  <select id="district">
+    <option *ngFor="let district of districts" value="{{ district }}">
+      {{ district }}
+    </option>
+  </select>
+</div>
